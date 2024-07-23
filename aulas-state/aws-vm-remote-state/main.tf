@@ -27,7 +27,7 @@ provider "aws" {
 }
 
 # Configura o acesso ao state remoto para obter dados de recursos provisionados e utilizar nos arquivos de configuração
-# Aponta para o mesmo state definido no backend acima
+# Aponta para o state utilizado na criação da '../aws-network/main.tf/#/backend' vamos associar a elementos definidos lá
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
